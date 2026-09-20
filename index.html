@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Villa OmBack — остров блаженства</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<script src="libs/gsap/gsap.min.js" defer></script>
+	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+	<link rel="stylesheet" href="css/omback.css">
+	<script src="js/omback.js" defer></script>
+</head>
+<body>
+
+	<div class="curtain"></div>
+
+	<div class="wrapper">
+		<div class="content">
+
+			<header class="topbar">
+				<a class="topbar__brand" href="index.html">
+					<img class="topbar__logo" src="img/logo.png" alt="">
+				</a>
+			</header>
+
+			<!-- ===== ГЕРОЙ ===== -->
+			<section class="hero">
+				<video class="hero__video" src="img/video/hero.mp4" autoplay muted loop playsinline></video>
+				<div class="hero__shade"></div>
+				<div class="hero__inner">
+					<h1 class="hero__title">Уютные Виллы<br>в тихом спальном районе</h1>
+				</div>
+
+				<p class="hero__geo">Будьте как дома,вне дома...</p>
+			</section>
+
+			<!-- ===== МАНИФЕСТ ===== -->
+			<section class="manifest" id="about">
+				<p class="label" data-reveal>о комплексе</p>
+				<h2 class="manifest__text" data-reveal>
+					Villa OmBack — это остров блаженства, уникальное сочетание
+					комфорта, удобства и настоящего стиля, место, наполненное
+					душевностью и мастерством.
+				</h2>
+				<p class="manifest__sub" data-reveal>
+					Естественные оттенки, натуральные материалы без существенной обработки,
+					много света, пространства и зеркал — вот общие черты, присущие Villa OmBack.
+				</p>
+			</section>
+
+			<!-- ===== ТРИ ДВЕРИ ===== -->
+			<section class="doors" id="doors">
+				<a class="door" href="banya.html" data-go data-reveal>
+					<img src="img/01.jpg" alt="" loading="lazy">
+					<div class="door__shade"></div>
+					<h3 class="door__name">Русская сказка</h3>
+					<p class="door__sub">настоящая русская баня · до 6 гостей</p>
+					<span class="door__open">Открыть дверь</span>
+				</a>
+				<a class="door" href="oasis.html" data-go data-reveal>
+					<img src="img/10.jpg" alt="" loading="lazy">
+					<div class="door__shade"></div>
+					<h3 class="door__name">Villa Oasis</h3>
+					<p class="door__sub">семейная вилла · до 10 гостей</p>
+					<span class="door__open">Открыть дверь</span>
+				</a>
+				<a class="door" href="exclusive.html" data-go data-reveal>
+					<img src="img/17.jpg" alt="" loading="lazy">
+					<div class="door__shade"></div>
+					<h3 class="door__name">Villa Exclusive</h3>
+					<p class="door__sub">приватная вилла · до 6 гостей</p>
+					<span class="door__open">Открыть дверь</span>
+				</a>
+			</section>
+
+			<!-- ===== РАСПОЛОЖЕНИЕ ===== -->
+			<section class="info">
+				<p class="label" data-reveal>расположение</p>
+				<div class="info__body">
+					<h3 class="info__title" data-reveal>Уютные виллы в тихом спальном районе</h3>
+					<p class="info__p" data-reveal>Полностью закрытая, приватная территория, вдали от городской суеты, утопающая в цветах и зелени. Мы находимся в пяти километрах от центра города и пляжей — самая удобная доступность во все районы города.</p>
+					<p class="info__p" data-reveal>В двух минутах ходьбы: банки, рынок, супермаркеты, магазины, медицинский центр, поликлиника и прочая инфраструктура.</p>
+				</div>
+			</section>
+
+			<!-- ===== ТЕРРИТОРИЯ ===== -->
+			<section class="territory" id="territory">
+				<figure class="mapframe" data-reveal>
+					<img src="img/09.jpg" alt="Карта территории Villa OmBack Oasis" loading="lazy">
+				</figure>
+				<div class="territory__aside">
+					<p class="label" data-reveal>территория</p>
+					<h3 class="info__title" data-reveal>Всё своё — внутри сада</h3>
+					<p class="info__p" data-reveal>Гостю не нужно никуда ехать: весь отдых разложен по территории, как по нотам.</p>
+					<div class="chips" data-reveal>
+						<span class="chip">Купель</span>
+						<span class="chip">Бассейн</span>
+						<span class="chip">Терраса</span>
+						<span class="chip">Кальянная</span>
+						<span class="chip">Летняя кухня</span>
+						<span class="chip">Лаунж «Jaz bar»</span>
+						<span class="chip">Садовая качелька</span>
+						<span class="chip">Фитнес-зона</span>
+						<span class="chip">Парковка</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- ===== ГАЛЕРЕЯ КОМПЛЕКСА ===== -->
+			<section class="gallery" id="gallery">
+				<p class="label" data-reveal>комплекс</p>
+				<div class="gallery__grid">
+					<figure class="gcard" data-reveal>
+						<img src="img/04.jpg" alt="" loading="lazy">
+						<figcaption><b>Двор и бассейн</b><span>зелёный остров летом</span></figcaption>
+					</figure>
+					<figure class="gcard" data-reveal>
+						<img src="img/05.jpg" alt="" loading="lazy">
+						<figcaption><b>Вечерний фасад</b><span>купель с подсветкой</span></figcaption>
+					</figure>
+					<figure class="gcard" data-reveal>
+						<img src="img/08.jpg" alt="" loading="lazy">
+						<figcaption><b>Бассейн в плюще</b><span>вечерняя вода</span></figcaption>
+					</figure>
+					<figure class="gcard" data-reveal>
+						<img src="img/21.jpg" alt="" loading="lazy">
+						<figcaption><b>Купель под небом</b><span>утренняя прохлада</span></figcaption>
+					</figure>
+				</div>
+			</section>
+
+			<!-- ===== ФИНАЛ ===== -->
+			<footer class="finale">
+				<img class="finale__logo" src="img/logo.png" alt="" loading="lazy">
+				<h2 data-reveal>Оставьте за порогом круговорот забот</h2>
+				<div class="finale__pills" data-reveal>
+					<a href="banya.html" data-go class="dpill">Русская сказка</a>
+					<a href="oasis.html" data-go class="dpill">Villa Oasis</a>
+					<a href="exclusive.html" data-go class="dpill">Villa Exclusive</a>
+				</div>
+				<p class="finale__copy">© Villa OmBack · Анапа</p>
+			</footer>
+
+		</div>
+	</div>
+
+</body>
+</html>
