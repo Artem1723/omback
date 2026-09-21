@@ -15,8 +15,6 @@
 <body>
 
 	<div class="curtain"></div>
-	<a class="backbtn" href="index.html">← Назад</a>
-
 	<div class="wrapper">
 		<div class="content">
 
@@ -50,20 +48,38 @@
 				<div class="ritual__item" data-reveal><b>3</b><h4>Купель</h4><p>контраст, который возвращает телу границы</p></div>
 			</section>
 
-			<section class="gallery">
-				<p class="label" data-reveal>баня</p>
-				<div class="gallery__grid">
-					<figure class="gcard" data-reveal><img src="img/01.jpg" alt=""><figcaption><b>Банька"Русская сказка"</b><span>полностью закрытая территория</span></figcaption></figure>
-					<figure class="gcard" data-reveal><img src="img/02.jpg" alt=""><figcaption><b>Купель</b><span>Освещенная холодная купель под открытым небом</span></figcaption></figure>
-					<figure class="gcard" data-reveal><img src="img/03.jpg" alt=""><figcaption><b>Мыльная комната</b><span>отдохните на теплом галечном лежаке</span></figcaption></figure>
-					<figure class="gcard" data-reveal><img src="img/08.jpg" alt=""><figcaption><b>Комната отдыха</b><span>стол и окно в купель</span></figcaption></figure>
-					<figure class="gcard" data-reveal><img src="img/07.jpg" alt=""><figcaption><b>Парная</b><span>из Архангельский сруба ручной рубки</span></figcaption></figure>
-					<figure class="gcard" data-reveal><img src="img/10.jpg" alt=""><figcaption><b>Бассейн</b><span>всегда прекрасная музыка возле горячего бассейна</span></figcaption></figure>
-				</div>
-			</section>
+<section class="gallery">
+	<p class="label" data-reveal>баня</p>
+	<div class="gallery__grid">
+		<figure class="gcard" data-reveal>
+			<img src="img/01.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/01.jpg">
+			<figcaption><b>Парная</b><span>бревно и лёгкий пар</span></figcaption>
+		</figure>
+		<figure class="gcard" data-reveal>
+			<img src="img/02.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/02.jpg">
+			<figcaption><b>Портал в парную</b><span>моечная из камня</span></figcaption>
+		</figure>
+		<figure class="gcard" data-reveal>
+			<img src="img/03.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/03.jpg">
+			<figcaption><b>Моечная</b><span>камень и лён</span></figcaption>
+		</figure>
+		<figure class="gcard" data-reveal>
+			<img src="img/06.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/06.jpg">
+			<figcaption><b>Комната отдыха</b><span>стол и окно в купель</span></figcaption>
+		</figure>
+		<figure class="gcard" data-reveal>
+			<img src="img/07.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/07.jpg">
+			<figcaption><b>Парение</b><span>веник и мастерство</span></figcaption>
+		</figure>
+		<figure class="gcard" data-reveal>
+			<img src="img/10.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/10.jpg">
+			<figcaption><b>Печь</b><span>сердце парной</span></figcaption>
+		</figure>
+	</div>
+</section>
 
 			<footer class="finale">
-				<img class="finale__logo" src="img/logo.png" alt="">
+				<img class="finale__logo" src="img/logo.png" alt="" loading="lazy">
 				<h2 data-reveal>Очистить тело и душу</h2>
 				<div class="finale__pills" data-reveal>
 					<a href="index.html" data-go class="dpill">К комплексу</a>
@@ -75,6 +91,13 @@
 
 		</div>
 	</div>
-
+<!-- ===== ЛАЙТБОКС ===== -->
+<div class="lightbox" id="lightbox">
+	<div class="lightbox__backdrop"></div>
+	<button class="lightbox__close" aria-label="Закрыть">✕</button>
+	<div class="lightbox__frame">
+		<img class="lightbox__img" src="" alt="">
+	</div>
+</div>
 </body>
 </html>
