@@ -1,42 +1,13 @@
 // Ждём полной загрузки DOM
 document.addEventListener('DOMContentLoaded', () => {
-	
-	// Регистрируем плагины GSAP
-	if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-		gsap.registerPlugin(ScrollTrigger)
-		
-		// ScrollSmoother только на десктопе
-		if (typeof ScrollSmoother !== 'undefined' && ScrollTrigger.isTouch !== 1 && window.innerWidth > 768) {
-			try {
-				ScrollSmoother.create({
-					wrapper: '.wrapper',
-					content: '.content',
-					smooth: 1.5,
-					effects: true
-				})
-			} catch (e) {
-				console.log('ScrollSmoother не загрузился:', e)
-			}
-		}
-	}
 
 	// ===== ЗАНАВЕС =====
 	const curtain = document.querySelector('.curtain')
+
 	if (curtain) {
-		// Вход: поднимаем занавес
+		// Вход: поднимаем занавес при загрузке страницы
 		window.addEventListener('load', () => {
 			requestAnimationFrame(() => curtain.classList.add('is-open'))
-			
-			// Анимация заголовка
-			if (typeof gsap !== 'undefined') {
-				gsap.from('.hero__title, .page-hero__inner', {
-					y: 30,
-					opacity: 0,
-					duration: 1,
-					ease: 'power3.out',
-					delay: 0.3
-				})
-			}
 		})
 
 		// ===== ВСЕ ССЫЛКИ С data-go =====
@@ -44,11 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			link.addEventListener('click', (e) => {
 				e.preventDefault()
 				const href = link.getAttribute('href')
-				
+
 				// Опускаем занавес
 				curtain.style.transformOrigin = 'bottom'
 				curtain.classList.remove('is-open')
-				
+
 				// Переход через 600мс
 				setTimeout(() => {
 					window.location.href = href
@@ -62,21 +33,38 @@ document.addEventListener('DOMContentLoaded', () => {
 			backBtn.addEventListener('click', (e) => {
 				e.preventDefault()
 				const href = backBtn.getAttribute('href')
-				
+
 				// Опускаем занавес
 				curtain.style.transformOrigin = 'bottom'
 				curtain.classList.remove('is-open')
-				
+
 				// Переход через 600мс
 				setTimeout(() => {
-					window.location.href = href
+					// Пытаемся вернуться назад в истории браузера, если не получается — идём по ссылке
+					if (window.history.length > 1 && document.referrer) {
+						window.history.back()
+					} else {
+						window.location.href = href
+					}
 				}, 600)
 			})
 		}
 	}
 
-	// ===== ПОЯВЛЕНИЯ ЭЛЕМЕНТОВ =====
+	// ===== ПОЯВЛЕНИЯ ЭЛЕМЕНТОВ ПРИ СКРОЛЛЕ (GSAP + ScrollTrigger) =====
 	if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+		gsap.registerPlugin(ScrollTrigger)
+
+		// Анимация заголовка
+		gsap.from('.hero__title, .page-hero__inner', {
+			y: 30,
+			opacity: 0,
+			duration: 1,
+			ease: 'power3.out',
+			delay: 0.3
+		})
+
+		// Появление всех элементов с data-reveal
 		const revealElements = document.querySelectorAll('[data-reveal]')
 		revealElements.forEach(el => {
 			gsap.from(el, {
