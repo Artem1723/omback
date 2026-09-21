@@ -15,8 +15,6 @@
 <body>
 
 	<div class="curtain"></div>
-	<a class="backbtn" href="index.html">← Назад</a>
-
 	<div class="wrapper">
 		<div class="content">
 
@@ -44,16 +42,31 @@
 				</div>
 			</section>
 
-			<section class="gallery">
-				<p class="label" data-reveal>вилла oasis</p>
-				<div class="gallery__grid">
-					<figure class="gcard" data-reveal><img src="img/11.jpg" alt="" loading="lazy"><figcaption><b>Кухня</b><span>качественная посуда и уютная обстановка</span></figcaption></figure>
-					<figure class="gcard" data-reveal><img src="img/12.jpg" alt="" loading="lazy"><figcaption><b>Зал</b><span>светлый зал с диванами, на которых так приятно вздремнуть после обеда</span></figcaption></figure>
-					<figure class="gcard" data-reveal><img src="img/13.jpg" alt="" loading="lazy"><figcaption><b>Спальни</b><span>четыре отдельных спальни, каждая из которых - отдельный мир</span></figcaption></figure>
-					<figure class="gcard" data-reveal><img src="img/14.jpg" alt="" loading="lazy"><figcaption><b>Терраса</b><span>просторная терасса с Full HD телевизором</span></figcaption></figure>
-					<figure class="gcard" data-reveal><img src="img/10.jpg" alt="" loading="lazy"><figcaption><b>Бассейн</b><span>кристально чистая вода отражает окружающую зелень и небо, создавая ощущение бесконечности и спокойствия.</span></figcaption></figure>
-				</div>
-			</section>
+<section class="gallery">
+	<p class="label" data-reveal>вилла oasis</p>
+	<div class="gallery__grid">
+		<figure class="gcard" data-reveal>
+			<img src="img/11.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/11.jpg">
+			<figcaption><b>Спальня</b><span>кровать-подиум и клетчатый плед</span></figcaption>
+		</figure>
+		<figure class="gcard" data-reveal>
+			<img src="img/12.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/12.jpg">
+			<figcaption><b>Зал</b><span>свет, простор и камин</span></figcaption>
+		</figure>
+		<figure class="gcard" data-reveal>
+			<img src="img/13.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/13.jpg">
+			<figcaption><b>Терраса</b><span>трапеза на воздухе</span></figcaption>
+		</figure>
+		<figure class="gcard" data-reveal>
+			<img src="img/14.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/14.jpg">
+			<figcaption><b>Кухня</b><span>домашнее тепло</span></figcaption>
+		</figure>
+		<figure class="gcard" data-reveal>
+			<img src="img/15.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/15.jpg">
+			<figcaption><b>Бассейн</b><span>шатёр из белых штор</span></figcaption>
+		</figure>
+	</div>
+</section>
 
 			<footer class="finale">
 				<img class="finale__logo" src="img/logo.png" alt="" loading="lazy">
@@ -68,6 +81,13 @@
 
 		</div>
 	</div>
-
+<!-- ===== ЛАЙТБОКС ===== -->
+<div class="lightbox" id="lightbox">
+	<div class="lightbox__backdrop"></div>
+	<button class="lightbox__close" aria-label="Закрыть">✕</button>
+	<div class="lightbox__frame">
+		<img class="lightbox__img" src="" alt="">
+	</div>
+</div>
 </body>
 </html>
