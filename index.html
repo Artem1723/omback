@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Villa OmBack Oasis — вилла до 10 гостей</title>
+	<title>Villa OmBack — остров блаженства</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 	<script src="libs/gsap/gsap.min.js" defer></script>
@@ -15,79 +15,311 @@
 <body>
 
 	<div class="curtain"></div>
+
 	<div class="wrapper">
 		<div class="content">
 
+			<!-- ===== 1. ШАПКА ===== -->
 			<header class="topbar">
 				<a class="topbar__brand" href="index.html">
 					<img class="topbar__logo" src="img/logo.png" alt="">
 				</a>
 			</header>
 
-			<section class="page-hero">
-				<img class="page-hero__img" src="img/10.jpg" alt="">
+			<!-- ===== 2. ПЕРВЫЙ ЭКРАН (HERO) ===== -->
+			<section class="hero">
+				<video class="hero__video" src="img/video/hero.mp4" autoplay muted loop playsinline></video>
 				<div class="hero__shade"></div>
-				<div class="page-hero__inner">
-					<h1 class="hero__title">Villa OmBack Oasis</h1>
-					<p class="page-hero__sub">вилла для большой компании · до 10 гостей</p>
+				<div class="hero__inner">
+					<h1 class="hero__title">
+						Welcome to Villa OmBack
+						<span class="hero__subtitle">атмосфера душевности и мастерства</span>
+					</h1>
+				</div>
+
+				<p class="hero__geo">Будьте как дома, вне дома...</p>
+				
+				<!-- Индикатор прокрутки -->
+				<div class="hero__scroll">
+					<span class="hero__scroll-text">листайте</span>
+					<span class="hero__scroll-arrow"></span>
 				</div>
 			</section>
 
+			<!-- ===== 3. МАНИФЕСТ ===== -->
+			<section class="manifest" id="about">
+				<p class="label" data-reveal>о комплексе</p>
+				<h2 class="manifest__text" data-reveal>
+					Villa OmBack — это остров блаженства, уникальное сочетание
+					комфорта, удобства и настоящего стиля, место, наполненное
+					душевностью и мастерством.
+				</h2>
+				<p class="manifest__sub" data-reveal>
+					Естественные оттенки, натуральные материалы без существенной обработки,
+					много света, пространства и зеркал — вот общие черты, присущие Villa OmBack.
+				</p>
+			</section>
+
+			<!-- ===== 5. РАСПОЛОЖЕНИЕ ===== -->
 			<section class="info">
-				<p class="label" data-reveal>о вилле</p>
+				<p class="label" data-reveal>расположение</p>
 				<div class="info__body">
-					<h3 class="info__title" data-reveal>Остров блаженства для своих</h3>
-					<p class="info__p" data-reveal>Villa OmBack Oasis комфортно вместит в себя до 10 человек. Вилла оснащена самой современной техникой и акустикой — всем необходимым для комфортного отдыха.</p>
-					<p class="info__p" data-reveal>Оставьте за порогом круговорот ежедневных забот и шагните в мир релакса и прекрасного времяпрепровождения. Спокойствие, приватность, гостеприимность хозяев и любезность персонала гарантируют приятный и расслабляющий отдых.</p>
+					<h3 class="info__title" data-reveal>Уютные виллы в тихом спальном районе</h3>
+					<p class="info__p" data-reveal>Полностью закрытая, приватная территория, вдали от городской суеты, утопающая в цветах и зелени. Мы находимся в пяти километрах от центра города и пляжей — самая удобная доступность во все районы города.</p>
+					<p class="info__p" data-reveal>В двух минутах ходьбы: банки, рынок, супермаркеты, магазины, медицинский центр, поликлиника и прочая инфраструктура.</p>
 				</div>
 			</section>
 
-<section class="gallery">
-	<p class="label" data-reveal>вилла oasis</p>
-	<div class="gallery__grid">
-		<figure class="gcard" data-reveal>
-			<img src="img/11.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/11.jpg">
-			<figcaption><b>Спальня</b><span>кровать-подиум и клетчатый плед</span></figcaption>
-		</figure>
-		<figure class="gcard" data-reveal>
-			<img src="img/12.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/12.jpg">
-			<figcaption><b>Зал</b><span>свет, простор и камин</span></figcaption>
-		</figure>
-		<figure class="gcard" data-reveal>
-			<img src="img/13.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/13.jpg">
-			<figcaption><b>Терраса</b><span>трапеза на воздухе</span></figcaption>
-		</figure>
-		<figure class="gcard" data-reveal>
-			<img src="img/14.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/14.jpg">
-			<figcaption><b>Кухня</b><span>домашнее тепло</span></figcaption>
-		</figure>
-		<figure class="gcard" data-reveal>
-			<img src="img/15.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/15.jpg">
-			<figcaption><b>Бассейн</b><span>шатёр из белых штор</span></figcaption>
-		</figure>
-	</div>
-</section>
+			<!-- ===== 6. КАРТА ===== -->
+			<section class="location" id="location">
+				<div class="location__info">
+					<p class="label" data-reveal>где мы находимся</p>
+					<h3 class="location__title" data-reveal>Россия, Краснодарский край<br>город Анапа, ст-ца Анапская</h3>
+					<p class="location__address" data-reveal>улица Московская, дом 55</p>
+					<p class="location__desc" data-reveal>5 км от центра города и пляжей.<br>Вся инфраструктура в 2 минутах ходьбы.</p>
+				</div>
+				<div class="location__map" data-reveal>
+					<iframe src="https://yandex.ru/map-widget/v1/?ll=37.376887%2C44.896625&z=16&pt=37.376887,44.896625,pm2rdm" frameborder="0" allowfullscreen="true"></iframe>
+				</div>
+			</section>
 
+			<!-- ===== 7. ТЕРРИТОРИЯ ===== -->
+			<section class="territory" id="territory">
+				<figure class="mapframe" data-reveal>
+					<img src="img/09.jpg" alt="Карта территории Villa OmBack Oasis" loading="lazy">
+				</figure>
+				<div class="territory__aside">
+					<p class="label" data-reveal>территория</p>
+					<h3 class="info__title" data-reveal>Всё своё — внутри сада</h3>
+					<p class="info__p" data-reveal>Гостю не нужно никуда ехать: весь отдых разложен по территории, как по нотам.</p>
+					<div class="chips" data-reveal>
+						<span class="chip">Купель</span>
+						<span class="chip">Бассейн</span>
+						<span class="chip">Терраса</span>
+						<span class="chip">Кальянная</span>
+						<span class="chip">Летняя кухня</span>
+						<span class="chip">Лаунж «Jaz bar»</span>
+						<span class="chip">Садовая качелька</span>
+						<span class="chip">Фитнес-зона</span>
+						<span class="chip">Парковка</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- ===== НОВЫЙ БЛОК: ЭКОСТИЛЬ ===== -->
+			<section class="eco" id="eco">
+				<p class="label" data-reveal>философия</p>
+				<h2 class="eco__title" data-reveal>Экостиль — это сближение с природой</h2>
+				<div class="eco__body">
+					<p class="eco__p" data-reveal>Экостиль в интерьере уютный и домашний, именно он несет спасительный отдых. Это максимальное сближение с природой. Естественные оттенки, натуральные материалы без существенной обработки, много света, пространства и зеркал в интерьере — вот общие черты, присущие Villa OmBack.</p>
+					<p class="eco__p" data-reveal>Наши виллы нацелены на семейные группы, рассчитывающие на тихий и спокойный отдых. Виллы оснащены самой современной техникой и акустикой.</p>
+					<p class="eco__p" data-reveal>Полностью закрытая, приватная территория, вдали от городской суеты, утопающая в цветах и зелени.</p>
+				</div>
+			</section>
+
+			<!-- ===== ПРИГЛАШЕНИЕ К ВЫБОРУ ===== -->
+			<section class="invite">
+				<p class="label" data-reveal>ваш выбор</p>
+				<h2 class="invite__title" data-reveal>
+					Три двери — три ритма отдыха
+					<span class="invite__sub">Загляните внутрь и найдите свой</span>
+				</h2>
+			</section>
+
+			<!-- ===== 4. ТРИ ДВЕРИ ===== -->
+			<section class="doors" id="doors">
+				<a class="door" href="banya.html" data-go data-reveal>
+					<img src="img/01.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/01.jpg">
+					<div class="door__shade"></div>
+					<h3 class="door__name">Русская сказка</h3>
+					<p class="door__sub">настоящая русская баня · до 6 гостей</p>
+					<span class="door__open">Заглянуть</span>
+				</a>
+				<a class="door" href="oasis.html" data-go data-reveal>
+					<img src="img/10.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/10.jpg">
+					<div class="door__shade"></div>
+					<h3 class="door__name">Villa Oasis</h3>
+					<p class="door__sub">семейная вилла · до 10 гостей</p>
+					<span class="door__open">Заглянуть</span>
+				</a>
+				<a class="door" href="exclusive.html" data-go data-reveal>
+					<img src="img/17.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/17.jpg">
+					<div class="door__shade"></div>
+					<h3 class="door__name">Villa Exclusive</h3>
+					<p class="door__sub">приватная вилла · до 6 гостей</p>
+					<span class="door__open">Заглянуть</span>
+				</a>
+			</section>
+
+			<!-- ===== 8. ГАЛЕРЕЯ-АККОРДЕОН ===== -->
+			<section class="gallery" id="gallery">
+				<div class="gallery__intro">
+					<p class="label" data-reveal>в деталях</p>
+					<h2 class="gallery__title" data-reveal>
+						Атмосфера, которую нужно увидеть
+						<span class="gallery__sub">десять моментов из жизни комплекса</span>
+					</h2>
+				</div>
+
+				<div class="gallery-accordion" data-reveal>
+					
+					<div class="acc-item is-active">
+						<img src="img/04.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/04.jpg">
+						<div class="acc-item__shade"></div>
+						<div class="acc-item__zoom"></div>
+						<div class="acc-item__content">
+							<span class="acc-item__num">01</span>
+							<h3 class="acc-item__name">Двор и бассейн</h3>
+							<p class="acc-item__desc">зелёный остров летом</p>
+						</div>
+					</div>
+
+					<div class="acc-item">
+						<img src="img/05.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/05.jpg">
+						<div class="acc-item__shade"></div>
+						<div class="acc-item__zoom"></div>
+						<div class="acc-item__content">
+							<span class="acc-item__num">02</span>
+							<h3 class="acc-item__name">Вечерний фасад</h3>
+							<p class="acc-item__desc">купель с подсветкой</p>
+						</div>
+					</div>
+
+					<div class="acc-item">
+						<img src="img/08.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/08.jpg">
+						<div class="acc-item__shade"></div>
+						<div class="acc-item__zoom"></div>
+						<div class="acc-item__content">
+							<span class="acc-item__num">03</span>
+							<h3 class="acc-item__name">Бассейн в плюще</h3>
+							<p class="acc-item__desc">вечерняя вода</p>
+						</div>
+					</div>
+
+					<div class="acc-item">
+						<img src="img/12.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/12.jpg">
+						<div class="acc-item__shade"></div>
+						<div class="acc-item__zoom"></div>
+						<div class="acc-item__content">
+							<span class="acc-item__num">04</span>
+							<h3 class="acc-item__name">Зал Oasis</h3>
+							<p class="acc-item__desc">свет, простор и камин</p>
+						</div>
+					</div>
+
+					<div class="acc-item">
+						<img src="img/13.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/13.jpg">
+						<div class="acc-item__shade"></div>
+						<div class="acc-item__zoom"></div>
+						<div class="acc-item__content">
+							<span class="acc-item__num">05</span>
+							<h3 class="acc-item__name">Терраса</h3>
+							<p class="acc-item__desc">трапеза на воздухе</p>
+						</div>
+					</div>
+
+					<div class="acc-item">
+						<img src="img/15.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/15.jpg">
+						<div class="acc-item__shade"></div>
+						<div class="acc-item__zoom"></div>
+						<div class="acc-item__content">
+							<span class="acc-item__num">06</span>
+							<h3 class="acc-item__name">Бассейн с шатром</h3>
+							<p class="acc-item__desc">белые шторы и закат</p>
+						</div>
+					</div>
+
+					<div class="acc-item">
+						<img src="img/17.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/17.jpg">
+						<div class="acc-item__shade"></div>
+						<div class="acc-item__zoom"></div>
+						<div class="acc-item__content">
+							<span class="acc-item__num">07</span>
+							<h3 class="acc-item__name">Ночной бассейн</h3>
+							<p class="acc-item__desc">вода и свечи</p>
+						</div>
+					</div>
+
+					<div class="acc-item">
+						<img src="img/20.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/20.jpg">
+						<div class="acc-item__shade"></div>
+						<div class="acc-item__zoom"></div>
+						<div class="acc-item__content">
+							<span class="acc-item__num">08</span>
+							<h3 class="acc-item__name">Спальня Exclusive</h3>
+							<p class="acc-item__desc">зеркало с подсветкой</p>
+						</div>
+					</div>
+
+					<div class="acc-item">
+						<img src="img/21.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/21.jpg">
+						<div class="acc-item__shade"></div>
+						<div class="acc-item__zoom"></div>
+						<div class="acc-item__content">
+							<span class="acc-item__num">09</span>
+							<h3 class="acc-item__name">Купель днём</h3>
+							<p class="acc-item__desc">утренняя прохлада</p>
+						</div>
+					</div>
+
+					<div class="acc-item">
+						<img src="img/01.jpg" alt="" loading="lazy" class="lightbox-trigger" data-full="img/01.jpg">
+						<div class="acc-item__shade"></div>
+						<div class="acc-item__zoom"></div>
+						<div class="acc-item__content">
+							<span class="acc-item__num">10</span>
+							<h3 class="acc-item__name">Парная</h3>
+							<p class="acc-item__desc">бревно и лёгкий пар</p>
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<!-- ===== 9 и 10. КОНТАКТЫ И ФИНАЛ ===== -->
 			<footer class="finale">
+				
+				<!-- Блок контактов -->
+				<div class="footer-contacts" data-reveal>
+					<p class="label">связаться с нами</p>
+					
+					<div class="footer-contacts__links">
+						<a href="tel:+79883113000" class="footer-link">+7 (988) 311-30-00</a>
+						<a href="mailto:villa-omback@mail.ru" class="footer-link">villa-omback@mail.ru</a>
+					</div>
+
+					<div class="footer-socials">
+						<a href="https://api.whatsapp.com/send/?phone=%2B79883113000&text&type=phone_number&app_absent=0" target="_blank" class="social-btn">WhatsApp</a>
+						<a href="https://t.me/Villa_OmBack" target="_blank" class="social-btn">Telegram</a>
+						<a href="https://vk.ru/villa_omback" target="_blank" class="social-btn">ВКонтакте</a>
+					</div>
+				</div>
+
+				<!-- Логотип и финальный блок -->
 				<img class="finale__logo" src="img/logo.png" alt="" loading="lazy">
-				<h2 data-reveal>Вы станете нашим частым гостем</h2>
+				
+				<h2 data-reveal>Оставьте за порогом круговорот забот</h2>
+				
 				<div class="finale__pills" data-reveal>
-					<a href="index.html" data-go class="dpill">К комплексу</a>
 					<a href="banya.html" data-go class="dpill">Русская сказка</a>
+					<a href="oasis.html" data-go class="dpill">Villa Oasis</a>
 					<a href="exclusive.html" data-go class="dpill">Villa Exclusive</a>
 				</div>
-				<p class="finale__copy">© Villa OmBack Oasis · Анапа</p>
+
+				<p class="finale__copy">© Villa OmBack · Анапа</p>
 			</footer>
 
 		</div>
 	</div>
-<!-- ===== ЛАЙТБОКС ===== -->
-<div class="lightbox" id="lightbox">
-	<div class="lightbox__backdrop"></div>
-	<button class="lightbox__close" aria-label="Закрыть">✕</button>
-	<div class="lightbox__frame">
-		<img class="lightbox__img" src="" alt="">
+
+	<!-- ===== ЛАЙТБОКС (ОТКРЫТИЕ ФОТО НА ВЕСЬ ЭКРАН) ===== -->
+	<div class="lightbox" id="lightbox">
+		<div class="lightbox__backdrop"></div>
+		<button class="lightbox__close" aria-label="Закрыть"></button>
+		<div class="lightbox__frame">
+			<img class="lightbox__img" src="" alt="">
+		</div>
 	</div>
-</div>
+
 </body>
 </html>
