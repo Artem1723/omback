@@ -43,7 +43,6 @@ a { text-decoration: none; color: inherit; }
 .topbar__word { font-family: var(--serif); font-size: 18px; letter-spacing: .04em; }
 
 /* ===== ГЕРОЙ ===== */
-/* ===== ГЕРОЙ ===== */
 .hero { 
 	position: relative; 
 	min-height: 100svh; 
@@ -67,7 +66,7 @@ a { text-decoration: none; color: inherit; }
 	z-index: 1;
 }
 .hero__inner {
-	position: relative; /* <-- ГЛАВНОЕ ИСПРАВЛЕНИЕ: было absolute, стало relative */
+	position: relative;
 	z-index: 2;
 	display: flex; 
 	flex-direction: column; 
@@ -94,6 +93,43 @@ a { text-decoration: none; color: inherit; }
 	letter-spacing: .2em; 
 	text-transform: uppercase; 
 	color: rgba(255,255,255,.7);
+}
+
+/* ===== ИНДИКАТОР ПРОКРУТКИ ===== */
+.hero__scroll {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+	opacity: 0;
+	animation: fadeInScroll 1s ease-out 1.5s forwards;
+}
+.hero__scroll-text {
+	font-size: 10px;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+	color: rgba(255,255,255,0.6);
+}
+.hero__scroll-arrow {
+	width: 18px;
+	height: 18px;
+	border-right: 1.5px solid rgba(255,255,255,0.8);
+	border-bottom: 1.5px solid rgba(255,255,255,0.8);
+	transform: rotate(45deg);
+	animation: scrollBounce 2s infinite ease-in-out;
+}
+@keyframes scrollBounce {
+	0%, 100% { transform: translateY(0) rotate(45deg); opacity: 1; }
+	50% { transform: translateY(6px) rotate(45deg); opacity: 0.4; }
+}
+@keyframes fadeInScroll {
+	from { opacity: 0; transform: translate(-50%, 10px); }
+	to { opacity: 1; transform: translate(-50%, 0); }
 }
 
 /* ===== СТРАНИЦА-ГЕРОЙ (внутренние) ===== */
@@ -189,118 +225,6 @@ a { text-decoration: none; color: inherit; }
 .gcard figcaption b { display: block; font-family: var(--serif); font-size: 17px; font-weight: 600; }
 .gcard figcaption span { font-size: 10px; color: rgba(255,255,255,.75); }
 
-/* ===== ФИНАЛ И КОНТАКТЫ ===== */
-.finale {
-	padding: 10vh 4vw 6vh; 
-	text-align: center;
-	border-top: 1px solid rgba(255,255,255,.08);
-	display: flex; 
-	flex-direction: column; 
-	align-items: center; 
-	gap: 32px;
-}
-
-/* --- Контакты в футере (теперь сверху) --- */
-.footer-contacts {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 24px;
-	padding-bottom: 2.5rem;
-	border-bottom: 1px solid rgba(255,255,255,0.08); /* Аккуратный разделитель */
-	width: 100%;
-	max-width: 600px;
-}
-.footer-contacts__links {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 12px;
-}
-.footer-link {
-	font-family: var(--serif);
-	font-size: clamp(1.2rem, 3vw, 1.8rem);
-	color: #fff;
-	text-decoration: none;
-	transition: color 0.3s;
-}
-.footer-link:hover {
-	color: var(--accent);
-}
-.footer-socials {
-	display: flex;
-	gap: 12px;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-.social-btn {
-	font-size: 11px;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	color: rgba(255,255,255,0.7);
-	border: 1px solid rgba(255,255,255,0.25);
-	border-radius: 999px;
-	padding: 10px 20px;
-	text-decoration: none;
-	transition: all 0.3s;
-}
-.social-btn:hover {
-	background: var(--accent);
-	border-color: var(--accent);
-	color: var(--bg);
-}
-
-/* --- Остальные элементы футера --- */
-.finale__logo {
-	height: 42px; 
-	width: auto; 
-	opacity: .9;
-	filter: invert(1) sepia(.35) saturate(1.2) hue-rotate(-8deg) brightness(1.05);
-}
-.finale h2 { 
-	font-family: var(--serif); 
-	font-weight: 500; 
-	font-size: clamp(1.6rem, 4vw, 3rem); 
-}
-.finale__pills { 
-	display: flex; 
-	gap: 12px; 
-	flex-wrap: wrap; 
-	justify-content: center; 
-}
-.dpill {
-	font-size: 12px; 
-	letter-spacing: .06em;
-	border: 1px solid rgba(255,255,255,.7); 
-	border-radius: 999px;
-	padding: 10px 24px; 
-	transition: all .3s; 
-	backdrop-filter: blur(6px);
-	background: rgba(23,19,16,.25);
-}
-.dpill:hover { 
-	background: #fff; 
-	color: var(--bg); 
-}
-.finale__copy { 
-	font-size: 10px; 
-	letter-spacing: .2em; 
-	text-transform: uppercase; 
-	color: rgba(255,255,255,.4); 
-	margin-top: 1rem;
-}
-
-/* ===== КНОПКА «НАЗАД» ===== */
-.backbtn {
-	position: fixed; left: 4vw; bottom: 20px; z-index: 20;
-	font-size: 12px; padding: 9px 20px; border-radius: 999px;
-	border: 1px solid rgba(255,255,255,.5);
-	background: rgba(23,19,16,.45);
-	backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-	transition: all .3s;
-}
-.backbtn:hover { background: #fff; color: var(--bg); }
-
 /* ===== КАРТА И КОНТАКТЫ ===== */
 .location {
 	display: flex;
@@ -353,17 +277,117 @@ a { text-decoration: none; color: inherit; }
 	filter: grayscale(0.15) contrast(1.02);
 }
 
-/* Мобильная версия */
-@media (max-width: 768px) {
-	.location {
-		flex-direction: column;
-		gap: 2rem;
-		padding: 4vh 4vw;
-	}
-	.location__info { flex: none; }
-	.location__map { min-height: 300px; }
-	.location__map iframe { min-height: 300px; }
+/* ===== ФИНАЛ И КОНТАКТЫ ===== */
+.finale {
+	padding: 10vh 4vw 6vh; 
+	text-align: center;
+	border-top: 1px solid rgba(255,255,255,.08);
+	display: flex; 
+	flex-direction: column; 
+	align-items: center; 
+	gap: 32px;
 }
+
+/* Контакты в футере (сверху) */
+.footer-contacts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+	padding-bottom: 2.5rem;
+	border-bottom: 1px solid rgba(255,255,255,0.08);
+	width: 100%;
+	max-width: 600px;
+}
+.footer-contacts__links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+}
+.footer-link {
+	font-family: var(--serif);
+	font-size: clamp(1.2rem, 3vw, 1.8rem);
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+.footer-link:hover {
+	color: var(--accent);
+}
+.footer-socials {
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.social-btn {
+	font-size: 11px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: rgba(255,255,255,0.7);
+	border: 1px solid rgba(255,255,255,0.25);
+	border-radius: 999px;
+	padding: 10px 20px;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+.social-btn:hover {
+	background: var(--accent);
+	border-color: var(--accent);
+	color: var(--bg);
+}
+
+/* Остальные элементы футера */
+.finale__logo {
+	height: 42px; 
+	width: auto; 
+	opacity: .9;
+	filter: invert(1) sepia(.35) saturate(1.2) hue-rotate(-8deg) brightness(1.05);
+}
+.finale h2 { 
+	font-family: var(--serif); 
+	font-weight: 500; 
+	font-size: clamp(1.6rem, 4vw, 3rem); 
+}
+.finale__pills { 
+	display: flex; 
+	gap: 12px; 
+	flex-wrap: wrap; 
+	justify-content: center; 
+}
+.dpill {
+	font-size: 12px; 
+	letter-spacing: .06em;
+	border: 1px solid rgba(255,255,255,.7); 
+	border-radius: 999px;
+	padding: 10px 24px; 
+	transition: all .3s; 
+	backdrop-filter: blur(6px);
+	background: rgba(23,19,16,.25);
+}
+.dpill:hover { 
+	background: #fff; 
+	color: var(--bg); 
+}
+.finale__copy { 
+	font-size: 10px; 
+	letter-spacing: .2em; 
+	text-transform: uppercase; 
+	color: rgba(255,255,255,.4); 
+	margin-top: 1rem;
+}
+
+/* ===== КНОПКА «НАЗАД» ===== */
+.backbtn {
+	position: fixed; left: 4vw; bottom: 20px; z-index: 20;
+	font-size: 12px; padding: 9px 20px; border-radius: 999px;
+	border: 1px solid rgba(255,255,255,.5);
+	background: rgba(23,19,16,.45);
+	backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+	transition: all .3s;
+}
+.backbtn:hover { background: #fff; color: var(--bg); }
 
 /* ===== ПЛАНШЕТЫ И МОБИЛЬНЫЕ ===== */
 @media (max-width: 768px) {
@@ -373,6 +397,7 @@ a { text-decoration: none; color: inherit; }
 	.hero { min-height: 100svh; }
 	.hero__title { font-size: clamp(1.6rem, 7vw, 2.8rem); }
 	.hero__geo { font-size: 10px; bottom: 16px; }
+	.hero__scroll { bottom: 60px; }
 	
 	.page-hero { height: 60svh; }
 	.page-hero__sub { font-size: 11px; }
@@ -403,10 +428,21 @@ a { text-decoration: none; color: inherit; }
 	.gallery__grid { grid-template-columns: 1fr; gap: 16px; }
 	.gcard figcaption b { font-size: 15px; }
 	
+	.location {
+		flex-direction: column;
+		gap: 2rem;
+		padding: 4vh 4vw;
+	}
+	.location__info { flex: none; }
+	.location__map { min-height: 300px; }
+	.location__map iframe { min-height: 300px; }
+	
 	.finale { padding: 8vh 4vw 5vh; gap: 24px; }
 	.finale__logo { height: 38px; }
 	.finale h2 { font-size: clamp(1.4rem, 6vw, 2.2rem); }
 	.dpill { font-size: 11px; padding: 9px 20px; }
+	.footer-link { font-size: clamp(1.1rem, 4vw, 1.5rem); }
+	.social-btn { font-size: 10px; padding: 8px 16px; }
 	
 	.backbtn { left: auto; right: 4vw; bottom: 16px; font-size: 11px; padding: 8px 18px; }
 }
